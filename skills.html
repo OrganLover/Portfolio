@@ -12,8 +12,8 @@
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <nav class="header__nav">
-            <a href="index.html" class="header__logo"><strong>Developer</strong> portfolio</a>
+          <nav class="nav">
+            <a class="header__logo" href="index.html"><strong>Developer</strong> portfolio</a>
             <ul class="nav-list">
               <li class="nav-list__item">
                 <a class="nav-list__link" href="index.html#projects">Projects</a>
@@ -25,9 +25,9 @@
                 <a class="nav-list__link" href="contacts.html">Contacts</a>
               </li>
               <li class="nav-list__item">
-                <div class="theme-toggler theme-toggler_dark-mode">
-                  <img src="assets/images/theme/Sun.svg" />
-                  <img src="assets/images/theme/Moon.svg" />
+                <div class="theme-toggler">
+                  <img class="theme-toggler__img" src="assets/images/theme/Sun.svg" />
+                  <img class="theme-toggler__img" src="assets/images/theme/Moon.svg" />
                 </div>
               </li>
             </ul>
@@ -35,18 +35,20 @@
         </div>
       </header>
       <main class="main">
-        <div class="page-wrapper">
+        <div class="page">
           <div class="skills">
-            <div class="page-title page-block">Skills</div>
-            <div class="page-block">
-              <div class="page-subtitle">Frontend</div>
-              <div class="page-text">
-                <span>HTML, CSS, SCSS, JavaScript, ReactJS, Redux</span>
+            <div class="page__title page__block">Skills</div>
+            <div class="page__block">
+              <div class="page__subtitle">Frontend</div>
+              <div class="page__text">
+                <span class="skills__techs">HTML, CSS, SCSS, JavaScript, TypeScript, React, Redux</span>
               </div>
             </div>
-            <div class="page-block">
-              <div class="page-subtitle">Backend</div>
-              <div class="page-text">ExpressJS</div>
+            <div class="page__block">
+              <div class="page__subtitle">Backend</div>
+              <div class="page__text">
+                <span class="skills__techs">ExpressJS</span>
+              </div>
             </div>
           </div>
         </div>
@@ -54,11 +56,11 @@
       <footer class="footer">
         <div class="footer__content">
           <div class="footer__contact-links">
-            <a href="https://vk.com/dlb6l9" target="_blank">
-              <img src="./assets/images/contacts/vk.svg" style="width: 100%" />
+            <a class="footer__contact-link" href="https://vk.com/dlb6l9" target="_blank">
+              <img class="footer__contact-img" src="./assets/images/contacts/vk.svg" />
             </a>
-            <a href="https://github.com/OrganLover" target="_blank">
-              <img src="./assets/images/contacts/gitHub.svg" style="width: 100%" />
+            <a class="footer__contact-link" href="https://github.com/OrganLover" target="_blank">
+              <img class="footer__contact-img" src="./assets/images/contacts/gitHub.svg" />
             </a>
           </div>
         </div>

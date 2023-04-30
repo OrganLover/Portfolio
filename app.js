@@ -12,18 +12,24 @@ onLoad()
 setClassName()
 
 function onLoad() {
-  allHtmls.forEach(item => item.dataset.theme = localStorageTheme)
   if (!localStorageTheme) {
     if (colorScheme === '"light"') {
       localStorage.setItem('theme', 'light')
+      localStorageTheme = localStorage.getItem('theme')
+      allHtmls.forEach(item => item.dataset.theme = localStorageTheme)
+
       gitHubIcons.forEach(item => item.src = gitHubBlackIconUrl)
     }
     else if (colorScheme === '"dark"') {
       localStorage.setItem('theme', 'dark')
+      localStorageTheme = localStorage.getItem('theme')
+      allHtmls.forEach(item => item.dataset.theme = localStorageTheme)
+
       gitHubIcons.forEach(item => item.src = gitHubIconUrl)
     }
     return
   }
+  allHtmls.forEach(item => item.dataset.theme = localStorageTheme)
   if (localStorageTheme === 'light') {
     gitHubIcons.forEach(item => item.src = gitHubBlackIconUrl)
   }
@@ -35,10 +41,10 @@ function onLoad() {
 
 function setClassName() {
   if (localStorageTheme === 'dark') {
-    themeToggler.classList.add('theme-toggler_dark-mode')
+    themeToggler.classList.add('theme-toggler--dark-mode')
   }
   else if (localStorageTheme === 'light') {
-    themeToggler.classList.remove('theme-toggler_dark-mode')
+    themeToggler.classList.remove('theme-toggler--dark-mode')
   }
 }
 
@@ -46,14 +52,14 @@ function toggleTheme() {
   if (localStorageTheme === 'light') {
     localStorage.setItem('theme', 'dark')
     localStorageTheme = localStorage.getItem('theme')
-    themeToggler.classList.add('theme-toggler_dark-mode')
+    themeToggler.classList.add('theme-toggler--dark-mode')
     allHtmls.forEach(item => item.dataset.theme = 'dark')
     gitHubIcons.forEach(item => item.src = gitHubIconUrl)
   }
   else if (localStorageTheme === 'dark') {
     localStorage.setItem('theme', 'light')
     localStorageTheme = localStorage.getItem('theme')
-    themeToggler.classList.remove('theme-toggler_dark-mode')
+    themeToggler.classList.remove('theme-toggler--dark-mode')
     allHtmls.forEach(item => item.dataset.theme = 'light')
     gitHubIcons.forEach(item => item.src = gitHubBlackIconUrl)
   }

@@ -12,8 +12,8 @@
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <nav class="header__nav">
-            <a href="index.html" class="header__logo"><strong>Developer</strong> portfolio</a>
+          <nav class="nav">
+            <a class="header__logo" href="index.html"><strong>Developer</strong> portfolio</a>
             <ul class="nav-list">
               <li class="nav-list__item">
                 <a class="nav-list__link" href="#projects">Projects</a>
@@ -25,9 +25,9 @@
                 <a class="nav-list__link" href="contacts.html">Contacts</a>
               </li>
               <li class="nav-list__item">
-                <div class="theme-toggler theme-toggler_dark-mode">
-                  <img src="assets/images/theme/Sun.svg" />
-                  <img src="assets/images/theme/Moon.svg" />
+                <div class="theme-toggler">
+                  <img class="theme-toggler__img" src="assets/images/theme/Sun.svg" />
+                  <img class="theme-toggler__img" src="assets/images/theme/Moon.svg" />
                 </div>
               </li>
             </ul>
@@ -35,22 +35,24 @@
         </div>
       </header>
       <main class="main">
-        <div class="greeting__wrapper">
-          <div class="greeting">
+        <div class="greeting">
+          <div class="greeting__wrapper">
             <div class="greeting__content">
               <div class="greeting__title">
-                <h1>Hi, my name is <span class="greeting__name">Dinar</span></h1>
-                <h2>a tatar developer</h2>
+                <h1 class="greeting__title-line-1">
+                  Hi, my name is <span class="greeting__name">Dinar</span>
+                </h1>
+                <h2 class="greeting__title-line-2">a tatar developer</h2>
               </div>
-              <div class="greeting__subtitle">
-                <span>with passion for learning and coding.</span>
+              <div class="greeting__subtitle-block">
+                <span class="greeting__subtitle">with passion for learning and coding.</span>
               </div>
               <div class="greeting__button">
                 <a
+                  class="greeting__button-link"
                   href="https://ufa.hh.ru/resume_converter/Юнусов%20Динар.pdf?hash=6fde3171ff09c5866a0039ed1f6d6b65507330&type=pdf&hhtmSource=resume&hhtmFrom=resume_list"
                   target="_blank"
                   download
-                  style="color: white"
                   >Download CV</a
                 >
               </div>
@@ -58,16 +60,22 @@
           </div>
         </div>
 
-        <div class="projects__wrapper" id="projects">
-          <div class="projects">
+        <div class="projects" id="projects">
+          <div class="projects__wrapper">
             <div class="projects__title">
               <h5>Projects</h5>
             </div>
             <div class="projects__list">
               <div class="project">
-                <a href="projects/social-network.html"
-                  ><img src="./assets/images/projects/networkProfilePage.png" />
-                  <span class="project-title">Social Network</span>
+                <a class="project__link" href="projects/social-network.html"
+                  ><img class="project__img" src="./assets/images/projects/networkProfilePage.png" />
+                  <span class="project__title">Social Network</span>
+                </a>
+              </div>
+              <div class="project">
+                <a class="project__link" href="projects/welbex.html"
+                  ><img class="project__img" src="./assets/images/projects/welbex.png" />
+                  <span class="project__title">Welbex</span>
                 </a>
               </div>
             </div>
@@ -77,11 +85,11 @@
       <footer class="footer">
         <div class="footer__content">
           <div class="footer__contact-links">
-            <a href="https://vk.com/dlb6l9" target="_blank">
-              <img src="./assets/images/contacts/vk.svg" style="width: 100%" />
+            <a class="footer__contact-link" href="https://vk.com/dlb6l9" target="_blank">
+              <img class="footer__contact-img" src="./assets/images/contacts/vk.svg" />
             </a>
-            <a href="https://github.com/OrganLover" target="_blank">
-              <img src="./assets/images/contacts/gitHub.svg" style="width: 100%" />
+            <a class="footer__contact-link" href="https://github.com/OrganLover" target="_blank">
+              <img class="footer__contact-img" src="./assets/images/contacts/gitHub.svg" />
             </a>
           </div>
         </div>
