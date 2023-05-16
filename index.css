@@ -74,7 +74,7 @@ html[data-theme='dark'] {
 .page__block {
   margin-block: 15px;
   text-align: center;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
 }
 
